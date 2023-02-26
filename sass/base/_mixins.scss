@@ -1,0 +1,48 @@
+@function int($f-min, $f-max, $units: px) {
+
+    $k: ($f-max - $f-min)/(1200 - 575);
+    $b: $f-min - $k * 575;
+
+    $b: $b + $units;
+
+    $cl-min: $f-min + $units;
+    $cl-max: $f-max + $units;
+
+    @return clamp($cl-min, calc(#{$k} * 100vw + #{$b}), $cl-max);
+
+}
+
+@mixin media($maxWidth) {
+
+    @media (max-width: $maxWidth){
+        @content;
+    }
+
+}
+
+@mixin list-item {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        width: 13px;
+        height: 13px;
+        background: linear-gradient(153.43deg, #D8CDBB 16.67%, #BBA774 100%);
+        border-radius: 100%;
+        position: absolute;
+        left: 0;
+        top: 5px;
+    }
+}
+
+@mixin list-style-logo {
+    &::before {
+        content: url('../img/support-6/list-style-logo.svg');
+        width: initial;
+        height: initial;
+        background: none;
+        border-radius: 0;
+        left: -3px;
+        top: 2px;
+    }
+}

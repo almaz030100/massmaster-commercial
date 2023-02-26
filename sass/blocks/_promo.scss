@@ -1,0 +1,106 @@
+.promo {
+    padding: int(130,197) 0 0 0;
+    background: url('../img/promo-1/bg.jpg') center center / cover no-repeat;
+    &__title {
+        max-width: int(720,860);
+        font-weight: 300;
+        font-size: int(24,36);
+        line-height: 150.5%;
+        text-transform: uppercase;
+        .span1 {
+            font-weight: 700;
+            color: #154542;
+        }
+        .span2 {
+            font-weight: 400;
+            color: #FEFEFE;
+            background: #BBA774;
+            border-radius: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    &__subtitle {
+        margin-top: 57px;
+        max-width: int(720,860);
+        font-weight: 300;
+        font-size: int(18,24);
+        line-height: 131%;
+    }
+    &__slider {
+        .splide__list {
+            display: flex !important;
+            gap: 103px;
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            span {
+                margin-top: 14px;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 131%;
+            }
+            p {
+                margin-top: 6px;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 131%;
+            }
+        }
+        &-logo {
+            margin-top: 41px;
+            width: 96px;
+            height: 96px;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 0px 50px -25px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(50px);
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .splide__pagination {
+            bottom: -25px;
+            transform: scale(1.5);
+        }
+        .splide__pagination__page {
+            opacity: 1;
+        }
+        .splide__pagination__page.is-active {
+            background: #bba774;
+        }
+    }
+    &__form {
+        position: relative;
+        z-index: 1;
+        top: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .promo__title, .promo__subtitle {
+        text-align: center;
+    }
+    .promo__title .span2 {
+        display: inline-block;
+    }
+    .promo__slider {
+        .splide__list {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+        &-item {
+            text-align: center;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .promo__slider .splide__list {
+        display: flex !important;
+    }
+}

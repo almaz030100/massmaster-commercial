@@ -1,0 +1,167 @@
+.franchise {
+    padding-top: int(45,71);
+    background: url('../img/franchise-11/bg.jpg') center center / cover no-repeat;
+    color: #fff;
+    &__title {
+        max-width: 1000px;
+        font-weight: 600;
+        font-size: int(20,36);
+        line-height: 145%;
+        span {
+            font-weight: 400;
+            padding: 7px 5px !important;
+        }
+    }
+    &__wrapper {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 57% 43%;
+    }
+    &__subtitle {
+        font-weight: 300;
+        font-size: int(20,36);
+        line-height: 119%;
+    }
+    &__text {
+        margin-top: 20px;
+        &-1 {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            p {
+                font-weight: 300;
+                font-size: int(16,20);
+                line-height: 131%;
+            }
+            ul {
+                font-weight: 300;
+                font-size: int(15,18);
+                line-height: 131%;
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                li {
+                    @include list-item;
+                    padding-left: 30px;
+                }
+            }
+        }
+        &-2 {
+            max-width: 507px;
+            span {
+                display: block;
+                font-weight: 500;
+                font-size: int(18,24);
+                line-height: 131%;
+            }
+            ul {
+                margin-top: 10px;
+                li {
+                    @include list-item;
+                    @include list-style-logo;
+                    padding-left: 24px;
+                    font-weight: 500;
+                    font-size: int(15,18);
+                    line-height: 131%;
+                    margin-bottom: 11px;
+                }
+                p {
+                    font-weight: 300;
+                    font-size: int(15,18);
+                    line-height: 131%;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    &__bottom {
+        max-width: 554px;
+        font-weight: 300;
+        font-size: int(18,24);
+        line-height: 131%;
+        span {
+            font-weight: 500;
+        }
+    }
+    &__right {
+        position: relative;
+        img {
+            position: absolute;
+            bottom: -115px;
+            left: -100px;
+        }
+    }
+    &__form {
+        position: relative;
+        top: 50px;
+        color: #000;
+    }
+}
+
+@media (max-width: 1199px) {
+    .franchise__right img {
+        left: -26px;
+        width: 504px;
+        bottom: -97px;
+    }
+    .franchise__subtitle {
+        width: 960px;
+    }
+    .franchise__text-1 p {
+        &:nth-child(1) {
+            width: 960px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .franchise__wrapper {
+        grid-template-columns: auto;
+    }
+    .franchise__subtitle {
+        width: 100%;
+    }
+    .franchise__title {
+        span {
+            display: inline-block;
+        }
+    }
+    .franchise__right {
+        display: flex;
+        justify-content: center;
+    }
+    .franchise__right img {
+        position: relative;
+        left: initial;
+        width: 400px;
+        max-width: 100%;
+        bottom: -81px;
+    }
+    .franchise__text-1 p:nth-child(1) {
+        width: 100%;
+    }
+    .franchise__text-1 ul {
+        max-width: 405px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .franchise__text-2 {
+        max-width: 100%;
+    }
+    .franchise__text-2 ul {
+        max-width: 430px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        li {
+            display: inline;
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+    .franchise__bottom {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

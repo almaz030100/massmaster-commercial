@@ -1,0 +1,107 @@
+.russians {
+    padding: int(45,72) 0 int(45,65) 0;
+    background: url('../img/russians-4/bg.jpg') center center / cover no-repeat;
+    &__wrapper {
+        margin-top: 44px;
+        display: grid;
+        grid-template-columns: 52% 48%;
+    }
+    &__main {
+        position: relative;
+        img {
+            position: relative;
+            float: right;
+            top: 17px;
+        }
+        p {
+            max-width: 460px;
+            font-weight: 300;
+            font-size: int(15,20);
+            line-height: 131%;
+            position: absolute;
+            right: 143px;
+            top: 0;
+            span {
+                font-weight: 500;
+                color: #1F6C66;
+            }
+        }
+    }
+    &__right {
+        &-descr {
+            font-weight: 300;
+            font-size: int(15,20);
+            line-height: 131%;
+            .span1 {
+                font-weight: 500;
+                color: #BDA875;
+            }
+            .span2 {
+                font-weight: 500;
+                color: #1F6C66;
+            }
+        }
+        &-block {
+            margin-top: 18px;
+            padding: int(25,34) int(15,18) int(25,34) int(15,29);
+            background: #FFFFFF;
+            box-shadow: 0px 4px 19px rgba(141, 141, 141, 0.25);
+            border-radius: 15px;
+            font-weight: 300;
+            font-size: int(15,18);
+            line-height: 131%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                li {
+                    @include list-item;
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+    &__bottom {
+        margin-top: 33px;
+        font-weight: 300;
+        font-size: int(18,24);
+        line-height: 131%;
+        span {
+            font-weight: 500;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .russians__main img {
+        width: 530px;
+        top: 57px;
+    }
+}
+
+@media (max-width: 991px) {
+    .russians__wrapper {
+        grid-template-columns: minmax(0, 600px);
+        justify-content: center;
+        gap: 30px;
+    }
+    .russians__main {
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        img {
+            width: 350px;
+            max-width: 100%;
+            position: initial;
+            order: 1;
+        }
+        p {
+            position: initial;
+        }
+    }
+}

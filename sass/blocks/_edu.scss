@@ -1,0 +1,194 @@
+.edu {
+    padding-top: int(40,72);
+    padding-bottom: int(40,47);
+    background: url('../img/edu-3/bg.jpg') center center / cover no-repeat;
+    &__title {
+        span {
+            font-weight: 600;
+        }
+    }
+    &__subtitle {
+        margin-top: int(40,56);
+        font-weight: 300;
+        font-size: int(18,24);
+        line-height: 131%;
+        .span1 {
+            font-weight: 500;
+            color: #154542;
+        }
+        .span2 {
+            font-weight: 500;
+            color: #BDA875;
+        }
+    }
+    &__slider {
+        margin-top: 42px;
+        margin-left: auto;
+        margin-right: auto;
+        .splide__slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 85%;
+                height: 85%;
+                object-fit: cover;
+                border-radius: 10px;
+                filter: contrast(.4);
+                transition: 0.3s all;
+            }
+            &.is-active {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    filter: contrast(1);
+                }
+            }
+        }
+        .splide__arrow {
+            width: initial;
+            height: initial;
+            background: initial;
+            opacity: 1;
+        }
+        .splide__arrow--prev {
+            left: -30px;
+        }
+        .splide__arrow--next {
+            right: -30px;
+        }
+        .splide__pagination {
+            bottom: -30px;
+            transform: scale(2);
+        }
+        .splide__pagination__page {
+            background: #bda875;
+            opacity: 1;
+        }
+        .splide__pagination__page.is-active {
+            background: #154542;
+        }
+    }
+    &__wrapper {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 40px;
+        &-item {
+            background: #FFFFFF;
+            border-radius: 15px;
+            outline: 1px solid #BDA875;
+            outline-offset: -9px;
+            padding: int(25,50) int(20,30) int(25,43) int(20,38);
+            position: relative;
+            font-weight: 300;
+            font-size: int(15,18);
+            line-height: 131%;
+            img {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+            }
+            ul {
+                margin-top: int(20,28);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                li {
+                    @include list-item;
+                    padding-left: 30px;
+                }
+            }
+            &:nth-child(1) {
+                img {
+                    right: -49px;
+                    bottom: 13px;
+                }
+                ul {
+                    max-width: 321px;
+                }
+            }
+            &:nth-child(2) {
+                img {
+                    right: -40px;
+                    bottom: -4px;
+                }
+            }
+        }
+    }
+    &__text {
+        margin-top: 40px;
+        font-weight: 300;
+        font-size: int(18,24);
+        line-height: 131%;
+        span {
+            font-weight: 500;
+        }
+    }
+    &__form {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1249px) {
+    .edu__slider .splide__arrow--prev {
+        left: 20px;
+    }
+    .edu__slider .splide__arrow--next {
+        right: 20px;
+    }
+    .edu__slider .splide__slide img {
+        filter: contrast(0.3);
+    }
+    .edu__wrapper {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .edu__title span {
+        display: inline-block;
+    }
+    .edu__wrapper-item:nth-child(1) img {
+        width: 220px;
+        right: -60px;
+    }
+    .edu__wrapper-item:nth-child(2) img {
+        width: 220px;
+        right: -15px;
+        bottom: -27px;
+    }
+}
+
+@media (max-width: 991px) {
+    .edu__slider .splide__slide img {
+        filter: contrast(1);
+        width: 100%;
+        height: 100%;
+    }
+    .edu__slider .splide__arrow--prev {
+        left: -60px;
+    }
+    .edu__slider .splide__arrow--next {
+        right: -60px;
+    }
+    .edu__wrapper {
+        grid-template-columns: minmax(300px, 460px);
+    }
+}
+
+@media (max-width: 575px) {
+    .edu__wrapper-item img {
+        position: initial;
+        right: initial;
+        bottom: initial;
+        order: 1;
+        margin-top: 15px;
+        align-self: center;
+    }
+    .edu__wrapper-item {
+        display: flex;
+        flex-direction: column;
+    }
+}

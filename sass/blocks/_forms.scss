@@ -1,0 +1,103 @@
+.form {
+
+}
+
+.form-open {
+    background: #FEFEFE;
+    box-shadow: 0px 4px 18px rgba(179, 179, 179, 0.4);
+    border-radius: 15px;
+    padding: int(25,39) int(15,30);
+    .form__title {
+        font-weight: 700;
+        font-size: int(18,22);
+        line-height: 131%;
+        text-align: center;
+    }
+    .form__inputs {
+        margin-top: 21px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+    }
+    input {
+        width: 25%;
+        height: 60px;
+        background: left 16px top 50% no-repeat, #fff;
+        border: 1px solid #828282;
+        border-radius: 10px;
+        padding-left: 53px;
+        padding-right: 15px;
+        font-size: 14px;
+        line-height: 1.42;
+        &::placeholder {
+            color: #B1B1B1;
+        }
+    }
+    input[name="name"] {
+        background-image: url('../img/form/name.svg');
+    }
+    input[name="phone"] {
+        background-image: url('../img/form/phone.svg');
+    }
+    input[name="email"] {
+        background-image: url('../img/form/email.svg');
+    }
+    .button {
+        width: 25%;
+        height: 81px;
+    }
+    .button-mobile {
+        display: none;
+    }
+    .form__policy {
+        margin-top: 20px;
+        display: flex;
+        align-items: start;
+        gap: 5px;
+        font-size: 14px;
+        line-height: 160%;
+        color: #AEAEAF;
+        img {
+            position: relative;
+            top: 4px;
+        }
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+label.error {
+    display: none !important;
+}
+
+input.error {
+    outline: 1px solid #ff3e3e;
+    border: none;
+}
+
+@media (max-width: 991px) {
+    .form-open .form__inputs {
+        flex-direction: column;
+    }
+    .form-open input {
+        display: none;
+        width: 300px;
+        max-width: 100%;
+    }
+    .form-open .button {
+        width: 300px;
+        max-width: 100%;
+    }
+    .form-open .button-desktop {
+        display: none;
+    }
+    .form-open .button-mobile {
+        display: block;
+    }
+    .form-open .form__policy {
+        display: none;
+    }
+}

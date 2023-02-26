@@ -1,0 +1,37 @@
+.header {
+    .container {
+        position: relative;
+    }
+    &__logo {
+        img {
+            width: int(130,170);
+        }
+    }
+    &__wrapper {
+        padding: int(20,36) 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    &__title {
+        max-width: 341px;
+        font-size: int(15,18);
+        line-height: 105.7%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .header__title {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .call img {
+        display: none;
+    }
+}

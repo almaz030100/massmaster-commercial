@@ -1,0 +1,220 @@
+.massage {
+    position: relative;
+    background: url('../img/massage-2/bg-2.jpg') center bottom / cover no-repeat;
+    &__main {
+        position: relative;
+        overflow: hidden;
+        padding: int(100,123) 0 95px 0;
+        background: url('../img/massage-2/bg.jpg') center center / cover no-repeat;
+    }
+    &__paragraph {
+        margin-top: int(40,66);
+        max-width: 658px;
+        font-weight: 300;
+        font-size: int(15,20);
+        line-height: 131%;
+        span {
+            font-weight: 500;
+            color: #BDA875;
+        }
+    }
+    &__facts {
+        margin-top: int(30,42);
+        font-weight: 600;
+        font-size: int(18,26);
+        line-height: 131%;
+        text-transform: uppercase;
+        color: #154542;
+    }
+    &__list {
+        margin-top: int(15,20);
+        max-width: int(720, 773);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 16px;
+        font-weight: 300;
+        font-size: int(15,20);
+        line-height: 131%;
+        li {
+            @include list-item;
+            padding-left: 21px;
+        }
+    }
+    &__bottom {
+        background: url('../img/massage-2/bg-2.jpg') center bottom / cover no-repeat;
+        padding-top: int(45,66);
+        position: relative;
+        top: -70px;
+        border-top-left-radius: 660px 70px;
+        border-top-right-radius: 660px 70px;
+        &-title {
+            font-weight: 600;
+            font-size: int(20,26);
+            line-height: 131%;
+            text-transform: uppercase;
+            color: #D8CDBB;
+        }
+        &-text {
+            margin-top: 35px;
+            font-weight: 300;
+            font-size: int(18,24);
+            line-height: 131%;
+            color: #fff;
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+    &__wrapper {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px;
+        justify-content: center;
+    }
+    &__item {
+        width: 22%;
+        padding-right: 5px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        display: flex;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 135%;
+        align-items: center;
+        img {
+            position: relative;
+        }
+        &:nth-child(2) {
+            .massage__item-img {
+                width: 82px;
+                img {
+                    right: 23px;
+                }
+            }
+        }
+        &:nth-child(5) {
+            .massage__item-img {
+                width: 78px;
+                img {
+                    right: 8px;
+                }
+            }
+        }
+        &:nth-child(7) {
+            .massage__item-img {
+                width: 101px;
+                img {
+                    right: 10px;
+                }
+            }
+        }
+    }
+    &__founder {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% + 141px);
+        &-text {
+            padding: 0 20px;
+            width: int(250, 315);
+            height: int(250, 315);
+            background: #1F6C66;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            outline: 1px solid #D8CDBB;
+            outline-offset: -10px;
+            font-weight: 300;
+            font-size: int(16,22);
+            line-height: 131%;
+            color: #FFFFFF;
+            position: absolute;
+            top: 129px;
+            left: -40px;
+            span {
+                font-weight: 500;
+                color: #D8CDBB;
+            }
+        }
+        img {
+            position: relative;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .massage__founder img {
+        width: 460px;
+    }
+    .massage__list {
+        grid-template-columns: auto;
+        max-width: 560px;
+    }
+    .massage__founder-text {
+        width: 250px;
+        height: 250px;
+        font-size: 18px;
+        top: 63px;
+        left: -47px;
+    }
+    .massage__founder {
+        left: calc(50% + 147px);
+    }
+    .massage__item {
+        max-width: 260px;
+        width: 35%;
+    }
+}
+
+@media (max-width: 991px) {
+    .massage__founder {
+        position: relative;
+        left: initial;
+        bottom: initial;
+        display: flex;
+        justify-content: center;
+    }
+    .massage__main {
+        padding-bottom: 0;
+    }
+    .massage__founder img {
+        width: 400px;
+        max-width: 100%;
+    }
+    .massage__founder-text {
+        left: calc(50% - 277px);
+    }
+    .massage__paragraph {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .massage__list {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .massage__item {
+        max-width: 260px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .massage__founder-text {
+        position: initial;
+    }
+    .massage__founder {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        img {
+            width: 350px;
+        }
+    }
+    .massage__item {
+        max-width: 260px;
+        width: 100%;
+    }
+}

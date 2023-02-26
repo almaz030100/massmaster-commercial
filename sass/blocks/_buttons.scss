@@ -1,0 +1,42 @@
+@keyframes slideme{0%{left:-30px;margin-left:0}30%,to{left:110%;margin-left:80px}}
+
+.button {
+    display: block;
+    font-weight: 700;
+    font-size: int(16,20);
+    line-height: 131%;
+    color: #FEFEFE;
+    background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    box-shadow: 0px 4px 9px rgba(141, 141, 141, 0.71);
+    border-radius: 15px;
+    border-style: none;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        background: linear-gradient(93.03deg, #16D9E3 -15.38%, #77E4F3 29.71%, #85E4F8 43.77%, #30C7EC 65.13%, #46AEF7 112.24%);
+        box-shadow: 0px 4px 9px rgba(141, 141, 141, 0.71), inset 0px -4px 4px rgba(57, 57, 57, 0.15), inset 0px 5px 8px rgba(255, 255, 255, 0.49);
+    }
+    &:active {
+        background: linear-gradient(90deg, rgba(22, 217, 227, 0.6) 0%, rgba(48, 199, 236, 0.6) 47%, rgba(70, 174, 247, 0.6) 100%);
+        transition: none;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        animation-delay: .05s;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-name: slideme;
+        animation-timing-function: ease-in-out;
+        background: linear-gradient(0deg,#fff,hsla(0,0%,100%,.01));
+        height: 300px;
+        left: -90px;
+        margin-left: 60px;
+        top: -150px;
+        transform: rotate(45deg);
+        transition: all .3s;
+        width: 25px;
+        z-index: 0;
+    }
+}

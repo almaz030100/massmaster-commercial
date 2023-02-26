@@ -1,0 +1,105 @@
+.period {
+    padding: int(45,72) 0 int(45,77) 0;
+    background: url('../img/period-9/bg.jpg') center center / cover no-repeat;
+    &__title {
+        color: #FFFFFF;
+        span {
+            font-weight: 600;
+        }
+    }
+    &__subtitle {
+        max-width: 665px;
+        margin-top: int(40,60);
+        font-weight: 300;
+        font-size: int(18,24);
+        line-height: 131%;
+        color: #FFFFFF;
+        span {
+            font-weight: 500;
+        }
+    }
+    &__wrapper {
+        max-width: 660px;
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        border-radius: 15px;
+        position: relative;
+        &::before {
+            content: url('../img/period-9/leaf.png');
+            position: absolute;
+            top: 10px;
+            right: 100%;
+        }
+        & > div {
+            background: #FFFFFF;
+            font-weight: 400;
+            font-size: int(15,20);
+            line-height: 131%;
+            padding: 14px 5px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+            border-right: 1px solid rgba(0, 0, 0, 0.22);
+            &:nth-child(even) {
+                border-right: none;
+            }
+            &:nth-child(1), &:nth-child(2) {
+                background: linear-gradient(0deg, #D8CDBB, #D8CDBB), #D8CDBB;
+                font-weight: 500;
+                font-size: int(18,24);
+                line-height: 131%;
+                color: #FFFFFF;
+                border-bottom: none;
+            }
+            &:nth-child(1) {
+                border-top-left-radius: 15px;
+            }
+            &:nth-child(2) {
+                border-top-right-radius: 15px;
+            }
+            &:nth-child(19), &:nth-child(20) {
+                background: #154542;
+                font-weight: 500;
+                font-size: int(17,24);
+                line-height: 131%;
+                color: #FFFFFF;
+            }
+            &:nth-child(19) {
+                border-bottom-left-radius: 15px;
+            }
+            &:nth-child(20) {
+                border-bottom-right-radius: 15px;
+            }
+        }
+    }
+    &__text {
+        max-width: 708px;
+        margin-top: int(40,50);
+        font-weight: 300;
+        font-size: int(18,24);
+        line-height: 131%;
+        color: #FFFFFF;
+        span {
+            font-weight: 500;
+        }
+    }
+    &__form {
+        margin-top: int(45,74);
+    }
+}
+
+@media (max-width: 991px) {
+    .period__subtitle {
+        max-width: 100%;
+    }
+    .period__wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .period__text {
+        max-width: 100%;
+    }
+}

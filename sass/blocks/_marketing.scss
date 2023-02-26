@@ -1,0 +1,91 @@
+.marketing {
+    padding-top: int(112,162);
+    padding-bottom: int(45,64);
+    background: url('../img/marketing-8/leaf-left.png') left bottom calc(50% + 50px) no-repeat,
+                url('../img/marketing-8/leaf-right.png') right top 21px no-repeat,
+                url('../img/marketing-8/bg.jpg') center bottom / cover no-repeat;
+    @include media(1576px) {
+        background: url("../img/marketing-8/leaf-left.png") left bottom calc(50% + 50px) no-repeat,url("../img/marketing-8/bg.jpg") center bottom/cover no-repeat;
+    }
+    &__subtitle {
+        margin-top: int(45,62);
+        font-weight: 300;
+        font-size: int(18,24);
+        line-height: 131%;
+        span {
+            font-weight: 500;
+            color: #154542;
+        }
+    }
+    &__wrapper {
+        margin-top: 45px;
+        display: grid;
+        grid-template-columns: minmax(0, auto) 57%;
+        gap: 55px;
+        &-img {
+            img {
+                float: right;
+                margin-top: 60px;
+                max-width: 107%;
+            }
+        }
+        &-right {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+    &__block {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 29px rgba(174, 171, 171, 0.25);
+        padding: int(25,37) int(20,59);
+        &-title {
+            font-weight: 500;
+            font-size: int(18,24);
+            line-height: 131%;
+        }
+        ul {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            font-weight: 300;
+            font-size: int(15,18);
+            line-height: 131%;
+            li {
+                @include list-item;
+                padding-left: 30px;
+            }
+        }
+    }
+    &__text {
+        margin-top: 40px;
+        font-weight: 500;
+        font-size: int(18,24);
+        line-height: 131%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .marketing__wrapper-img img {
+        margin-top: 148px;
+    }
+}
+
+@media (max-width: 991px) {
+    .marketing__wrapper {
+        grid-template-columns: minmax(0, auto);
+        justify-content: center;
+    }
+    .marketing__wrapper-img {
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .marketing__wrapper-img img {
+        margin-top: 0;
+        float: initial;
+        max-width: 100%;
+        width: 350px;
+    }
+}
